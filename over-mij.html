@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB | Over mij</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white dark:bg-dark shadow-md z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-dark dark:text-accent flex items-center">
+                    <span class="font-['Sedgwick_Ave_Display'] text-3xl leading-none -mb-1">JB</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Home</a>
+                    <a href="over-mij.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Over mij</a>
+                    <a href="projecten.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Mijn Projecten</a>
+                    <a href="contact.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Contact</a>
+                    <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-light">
+                        <svg class="w-6 h-6 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                        </svg>
+                        <svg class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuButton" class="md:hidden">
+                    <svg class="w-6 h-6 text-dark dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Home</a>
+                    <a href="over-mij.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Over mij</a>
+                    <a href="projecten.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Mijn Projecten</a>
+                    <a href="contact.html" class="text-dark dark:text-white hover:text-dark-light dark:hover:text-accent">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <main class="pt-24">
+        <section class="container mx-auto px-4 py-16">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-bold text-dark dark:text-accent mb-8">Over mij</h1>
+                
+                <div class="prose dark:prose-invert max-w-none">
+                    <p class="text-lg text-gray-600 dark:text-white mb-6">
+                        Ik ben Jeal Balatbat, een 18-jarige student die zich specialiseert in Full-stack Software Development. Ik studeer momenteel aan het Grafisch Lyceum Rotterdam op MBO Niveau 4.
+                    </p>
+                    
+                    <h2 class="text-2xl font-semibold text-dark dark:text-accent mt-8 mb-4">Mijn Vaardigheden</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/html.svg" alt="HTML Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">HTML</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="90" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/css.svg" alt="CSS Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">CSS</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="85" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/javascript.svg" alt="JavaScript Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">JavaScript</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="80" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/sql.svg" alt="SQL Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">SQL</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="75" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/php.svg" alt="PHP Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">PHP</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="70" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/typescript.svg" alt="TypeScript Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">TypeScript</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="65" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/nodejs.svg" alt="Node.js Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">Node.js</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="70" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/react.svg" alt="React.js Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">React.js</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="75" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/laravel.svg" alt="Laravel Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">Laravel</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="40" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/lua.svg" alt="LUA (Roblox) Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">LUA (Roblox)</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="40" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 100%);"></div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 dark:bg-dark-light p-4 rounded-lg flex flex-col items-center">
+                            <img src="assets/skills/wordpress.svg" alt="Wordpress Logo" class="h-8 w-8 mb-2 dark:invert">
+                            <span class="font-semibold text-dark dark:text-white mb-1">Wordpress</span>
+                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5 mt-2">
+                                <div class="h-2.5 rounded-full skill-bar" data-percentage="90" style="width: 0; background: linear-gradient(90deg, #f43f5e 0%, #facc15 30%, #22c55e 100%);"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-2xl font-semibold text-dark dark:text-accent mt-8 mb-4">Opleiding & Ervaring</h2>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-dark dark:border-accent pl-4">
+                            <h3 class="font-semibold text-dark dark:text-accent typewriter">Grafisch Lyceum Rotterdam (MBO Niveau 4), Software Development - Leercontract</h3>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">Juli 2022 - Heden</p>
+                            <br>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Specialiseert in Full-stack Software development. (HTML, CSS, JavaScript, SQL, PHP, TypeScript, Node.js, React.js, Laravel, Wordpress)</p>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Samengewerkt met frontend-ontwikkelaars om naadloze gebruikerservaringen te creëren.</p>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Kennis op niveau gehouden door zelfstandig bij te blijven leren.</p>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Op een professionele manier met medestudenten samengewerkt.</p>
+                        </div>
+                        <div class="border-l-4 border-dark dark:border-accent pl-4">
+                            <h3 class="font-semibold text-dark dark:text-accent typewriter">Kahuwa (Private Creative Agency), Multimedia Designer - Arbeidscontract</h3>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">April 2021 - Heden</p>
+                            <br>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Ontwikkelen van websites voor uiteenlopende klanten en merken</p>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Verantwoordelijk voor visuele content, UI/UX-ontwerpen en branding</p>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Werken binnen een multidisciplinair team aan creative oplossingen op maat</p>
+                        </div>
+                        <div class="border-l-4 border-dark dark:border-accent pl-4">
+                            <h3 class="font-semibold text-dark dark:text-accent typewriter">Minister van Kinderen, Website Ontwikkelaar - Vrijwillig</h3>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">Maart 2022 - April 2023</p>
+                            <br>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Samengewerkt met frontend-ontwikkelaars om naadloze gebruikerservaringen te creëren.</p>
+                            <p class="text-gray-600 dark:text-white typewriter-multiline">• Bestaande systemen aangepast om nieuwe functies en integraties mogelijk te maken.</p>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+@layer base {
+  body {
+    @apply bg-white text-dark dark:bg-dark dark:text-white transition-colors duration-300;
+  }
+  
+  .dark body {
+    @apply bg-dark text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply transition-colors duration-300;
+  }
+
+  /* Glowing effect for hacker theme */
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    text-shadow: 0 0 8px #ff0033, 0 0 16px #ff0033;
+  }
+} 
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #ff0033;
+    border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #ff4d4d;
+}
+
+/* Matrix-like hover effect for links */
+.dark a {
+    transition: all 0.3s ease;
+}
+
+.dark a:hover {
+    color: #ff0033;
+    text-shadow: 0 0 8px rgba(255, 0, 51, 0.5);
+}
+
+.draw-text {
+  stroke: currentColor;
+  fill: none;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: draw 5s ease forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Make SVG draw-text red and glowing in dark mode */
+.dark .draw-text {
+  stroke: #ff0033 !important;
+  filter: drop-shadow(0 0 8px #ff0033) drop-shadow(0 0 16px #ff0033);
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ff0033;
+  width: 0;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  animation: typing 3s steps(31, end) forwards, blink-caret 0.7s step-end 4;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #ff0033; }
+}
+
+.typewriter-multiline {
+  overflow: hidden;
+  border-right: 2px solid #ff0033;
+  display: block;
+  white-space: pre-line;
+  text-align: left;
+  width: 0;
+  animation: typing-multi 3s steps(100, end) forwards, blink-caret 0.7s step-end 4;
+}
+
+@keyframes typing-multi {
+  from { width: 0 }
+  to { width: 100% }
+} 
