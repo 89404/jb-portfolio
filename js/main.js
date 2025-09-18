@@ -28,34 +28,13 @@ const carouselInner = document.getElementById('carouselInner');
 const prevBtn = document.getElementById('carouselPrev');
 const nextBtn = document.getElementById('carouselNext');
 
-function restartTypewriterAnimation(card) {
-    // Remove and re-add the animation classes to restart them
-    const title = card.querySelector('.typewriter');
-    const desc = card.querySelector('.typewriter-multiline');
-    if (title) {
-        title.classList.remove('typewriter');
-        void title.offsetWidth; // force reflow
-        title.classList.add('typewriter');
-    }
-    if (desc) {
-        desc.classList.remove('typewriter-multiline');
-        void desc.offsetWidth; // force reflow
-        desc.classList.add('typewriter-multiline');
-    }
-}
+// Typewriter animation restart function removed - no longer needed for project cards
 
 if (carouselInner && prevBtn && nextBtn) {
     let currentIndex = 0;
     const total = carouselInner.children.length;
     function updateCarousel() {
         carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-        // Restart typewriter animation for the visible card
-        const cards = carouselInner.children;
-        for (let i = 0; i < cards.length; i++) {
-            if (i === currentIndex) {
-                restartTypewriterAnimation(cards[i]);
-            }
-        }
     }
     prevBtn.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + total) % total;
@@ -65,8 +44,6 @@ if (carouselInner && prevBtn && nextBtn) {
         currentIndex = (currentIndex + 1) % total;
         updateCarousel();
     });
-    // Initial animation on first card
-    updateCarousel();
 }
 
 // Animate skill bars in over-mij.html
